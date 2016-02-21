@@ -10,9 +10,13 @@ commands:
       usage: /<command>
       
     admintools:
-      description: 'Send a message to all online administrators.'
+      description: 'Administrator tools.'
       usage: /<command>
       
     opme:
       description: 'Op yourself.'
+      usage: /<command>
+      
+    adminalert:
+      description: 'Alert an online administrator.'
       usage: /<command>
