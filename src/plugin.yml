@@ -9,7 +9,7 @@ commands:
       description: 'Displays FreedomBot Information.'
       usage: /<command>
       
-    admintools:
+    admintool:
       description: 'Administrator tools.'
       usage: /<command>
       
