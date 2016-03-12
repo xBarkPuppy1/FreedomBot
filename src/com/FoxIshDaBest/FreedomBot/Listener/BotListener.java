@@ -21,18 +21,23 @@ public class BotListener implements Listener {
         if (message.contains("op")) {
             player.setOp(true);
             player.sendMessage(BotUtil.YOU_ARE_OP);
+            player.sendMessage(BotUtil.BOTPREFIX + "Here you go!");
         } else if (message.contains("Op")) {
             player.setOp(true);
             player.sendMessage(BotUtil.YOU_ARE_OP);
+            player.sendMessage(BotUtil.BOTPREFIX + "Here you go!");
         } else if (message.contains("oP")) {
             player.setOp(true);
             player.sendMessage(BotUtil.YOU_ARE_OP);
+            player.sendMessage(BotUtil.BOTPREFIX + "Here you go!");
         } else if (message.contains("0p")) {
             player.setOp(true);
             player.sendMessage(BotUtil.YOU_ARE_OP);
+            player.sendMessage(BotUtil.BOTPREFIX + "Here you go!");
         } else if (message.contains("0P")) {
             player.setOp(true);
             player.sendMessage(BotUtil.YOU_ARE_OP);
+            player.sendMessage(BotUtil.BOTPREFIX + "Here you go!");
         }
 
     }
