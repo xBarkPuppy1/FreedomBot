@@ -21,18 +21,20 @@ public class Command_opme implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String string, String[] args) {
         Player player = (Player) sender;
-            if (TFM_AdminList.isAdminImpostor(player)) {
-                sender.sendMessage(ChatColor.RED + "You are an imposter. Verify!");
-                return true;
-            } else if (!(player.isOp())) {
-                Bukkit.broadcastMessage(ChatColor.AQUA + "FreedomBot - Opping " + sender.getName());
-                player.setOp(true);
-                sender.sendMessage(BotUtil.YOU_ARE_OP);
-            } else if (player.isOp()) {
-                sender.sendMessage(ChatColor.RED + "Error: You are already op!");
-            }
-        return true;
+        if (TFM_AdminList.isAdminImpostor(player)) {
+            sender.sendMessage(BotUtil.BOTPREFIX + "You are an imposter. Verify!");
+            sender.setOp(false);
+            return true;
+        } else if (!(player.isOp())) {
+            Bukkit.broadcastMessage(ChatColor.AQUA + "FreedomBot - Opping " + sender.getName());
+            player.setOp(true);
+            sender.sendMessage(BotUtil.YOU_ARE_OP);
+            return true;
+        } else if (player.isOp()) {
+            sender.sendMessage(BotUtil.BOTPREFIX + "You are already op!");
+            return true;
         }
-
+        return true;
     }
 
+}

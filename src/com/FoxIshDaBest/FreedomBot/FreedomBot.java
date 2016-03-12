@@ -33,6 +33,7 @@ public class FreedomBot extends JavaPlugin {
     this.getCommand("opme").setExecutor(new Command_opme(plugin));
     this.getCommand("admintool").setExecutor(new Command_admintool(plugin));
     this.getCommand("adminalert").setExecutor(new Command_adminalert(plugin));
+    this.getCommand("makemefleh").setExecutor(new Command_makemefleh(plugin));
     
     }
 
