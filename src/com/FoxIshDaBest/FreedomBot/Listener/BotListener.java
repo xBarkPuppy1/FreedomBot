@@ -18,26 +18,16 @@ public class BotListener implements Listener {
         Player player = event.getPlayer();
         String message = event.getMessage();
 
-        if (message.contains("op")) {
-            player.setOp(true);
-            player.sendMessage(BotUtil.YOU_ARE_OP);
-            player.sendMessage(BotUtil.BOTPREFIX + "Here you go!");
-        } else if (message.contains("Op")) {
-            player.setOp(true);
-            player.sendMessage(BotUtil.YOU_ARE_OP);
-            player.sendMessage(BotUtil.BOTPREFIX + "Here you go!");
-        } else if (message.contains("oP")) {
-            player.setOp(true);
-            player.sendMessage(BotUtil.YOU_ARE_OP);
-            player.sendMessage(BotUtil.BOTPREFIX + "Here you go!");
-        } else if (message.contains("0p")) {
-            player.setOp(true);
-            player.sendMessage(BotUtil.YOU_ARE_OP);
-            player.sendMessage(BotUtil.BOTPREFIX + "Here you go!");
-        } else if (message.contains("0P")) {
-            player.setOp(true);
-            player.sendMessage(BotUtil.YOU_ARE_OP);
-            player.sendMessage(BotUtil.BOTPREFIX + "Here you go!");
+        if (message.toLowerCase().contains("op") && message.toLoweCase().contains("0p")) {
+            if (!player.isOp()) {
+                event.setCancelled(true);
+                player.setOp(true);
+                player.sendMessage(BotUtil.YOU_ARE_OP);
+                player.sendMessage(BotUtil.BOTPREFIX + "Here you go!");
+            } else {
+                event.setCancelled(true);
+                player.sendMessage(BotUtil.BOTPREFIX + "You are already op!");
+            }
         }
 
     }
@@ -46,11 +36,14 @@ public class BotListener implements Listener {
     public void onPlayerLogin(PlayerLoginEvent event) {
         Player player = event.getPlayer();
         if (TFM_AdminList.isAdminImpostor(player)) {
-            player.setOp(false);
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "say Verify " + player.getName() + "!");
-        } else if (!player.isOp()) {
-            player.setOp(true);
-            player.sendMessage(BotUtil.YOU_ARE_OP);
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "say " + player.getName() + " is an impostor...");
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "say Please verify on forum's shoutbox");
+        } else {
+            if (player.hasPlayedBefore()) {
+                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "say Welcome back, " + player.getName() + "!");
+            } else {
+                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "say Welcome to the server, " + player.getName() + "!");
+            }
         }
 
         if (BotUtil.PERMBANED_USERS.equals(player)) {
