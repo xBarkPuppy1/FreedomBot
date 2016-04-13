@@ -14,7 +14,7 @@ public class BotUtil {
     public static final String UNBANNED = ChatColor.GREEN + "You have been unbanned.";
     public static final String BOTPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "Freedom" + ChatColor.RED + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.RESET + " ";
     public static final List<String> FB_DEVELOPERS = Arrays.asList("FoxIshDaBest", "MaxTheHaxor", "heroguy42");
-    public static final List<String> PERMBANED_USERS = Arrays.asList("Secretic", "TheVenusKingMC");
+    public static final List<String> PERMBANED_USERS = Arrays.asList("");
 
     public static void banIP(Player player) {
         Bukkit.banIP(BANNED);
