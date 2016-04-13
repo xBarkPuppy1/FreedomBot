@@ -36,13 +36,13 @@ public class BotListener implements Listener {
     public void onPlayerLogin(PlayerLoginEvent event) {
         Player player = event.getPlayer();
         if (TFM_AdminList.isAdminImpostor(player)) {
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "say " + player.getName() + " is an impostor...");
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "say Please verify on forum's shoutbox");
+            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + player.getName() + " is an impostor...");
+            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Please verify in forum's shoutbox.");
         } else {
             if (player.hasPlayedBefore()) {
-                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "say Welcome back, " + player.getName() + "!");
+                Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Welcome back, " + player.getName() + "!");
             } else {
-                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "say Welcome to the server, " + player.getName() + "!");
+                Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Welcome to the server, " + player.getName() + "!");
             }
         }
 
