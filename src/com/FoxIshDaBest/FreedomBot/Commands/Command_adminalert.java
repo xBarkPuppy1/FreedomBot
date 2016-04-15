@@ -25,6 +25,7 @@ public class Command_adminalert implements CommandExecutor {
         String message = StringUtils.join(ArrayUtils.subarray(args, 0, args.length), " ");
         
         if (!TFM_AdminList.isSuperAdmin(sender)) {
+            // TODO: Broadcast only to admins        
             TFM_Util.bcastMsg(name + message.replaceAll("&", "§") );
             return true;
         }
