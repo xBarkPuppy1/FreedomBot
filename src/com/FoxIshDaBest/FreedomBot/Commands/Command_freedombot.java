@@ -1,7 +1,6 @@
 package com.FoxIshDaBest.FreedomBot.Commands;
 
 import com.FoxIshDaBest.FreedomBot.FreedomBot;
-import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -21,24 +20,24 @@ public class Command_freedombot implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String string, String[] args) {
 
         if (!sender.getName().equals("FoxIshDaBest")) {
-            sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v1.4" + ChatColor.DARK_GRAY + "-----");
-            sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v1.4!");
-            sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's \n jobs easier. was made for RainbowFreedom.");
+            sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v2.0" + ChatColor.DARK_GRAY + "-----");
+            sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v2.0!");
+            sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's jobs easier.");
             sender.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "Commands: " + ChatColor.YELLOW + "/freedombot, /opme, /admintool, /adminalert");
             sender.sendMessage(ChatColor.YELLOW + "More features will be coming soon!");
             sender.sendMessage(ChatColor.YELLOW + "Want to help with the development of FreedomBot?");
             sender.sendMessage(ChatColor.YELLOW + "Go to https://github.com/RainbowFreedomDev/FreedomBot!");
-            sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v1.4" + ChatColor.DARK_GRAY + "-----");
-        } else if (sender.getName().equals("FoxIshDaBest") && TFM_AdminList.isSuperAdmin(sender)) {
+            sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v2.0" + ChatColor.DARK_GRAY + "-----");
+        } else if (!sender.getName().equals("FoxIshDaBest")) {
             if (args.length == 0) {
-                sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v1.4" + ChatColor.DARK_GRAY + "-----");
-                sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v1.4!");
-                sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's \n jobs easier that was made for RainbowFreedom.");
+                sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v2.0" + ChatColor.DARK_GRAY + "-----");
+                sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v2.0!");
+                sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's jobs easier.");
                 sender.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "Commands: " + ChatColor.YELLOW + "/freedombot, /opme, /admintool, /adminalert");
                 sender.sendMessage(ChatColor.YELLOW + "More features will be coming soon!");
                 sender.sendMessage(ChatColor.YELLOW + "Want to help with the development of FreedomBot?");
                 sender.sendMessage(ChatColor.YELLOW + "Go to https://github.com/RainbowFreedomDev/FreedomBot!");
-                sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v1.4" + ChatColor.DARK_GRAY + "-----");
+                sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v2.0" + ChatColor.DARK_GRAY + "-----");
             } else if (args.length == 1) {
                 if (null != args[0]) {
                     switch (args[0]) {

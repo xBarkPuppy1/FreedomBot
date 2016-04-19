@@ -13,7 +13,10 @@ public class BotUtil {
     public static final String BANNED = ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "Freedom" + ChatColor.RED + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.RESET + " You have been banned.";
     public static final String UNBANNED = ChatColor.GREEN + "You have been unbanned.";
     public static final String BOTPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "Freedom" + ChatColor.RED + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.RESET + " ";
-    public static final List<String> FB_DEVELOPERS = Arrays.asList("FoxIshDaBest", "MaxTheHaxor", "heroguy42");
+    //
+    // Do not remove any of the names below!
+    //
+    public static final List<String> FB_DEVELOPERS = Arrays.asList("FoxIshDaBest", "DUFC_Liam");
     public static final List<String> PERMBANED_USERS = Arrays.asList("");
 
     public static void banIP(Player player) {
@@ -40,10 +43,4 @@ public class BotUtil {
         }
     }
 
-    public static void setFlying(Player player, boolean flying) {
-        player.setAllowFlight(true);
-        player.setFlying(flying);
-    }
-    
-    
 }

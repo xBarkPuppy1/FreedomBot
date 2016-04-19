@@ -1,8 +1,6 @@
 package com.FoxIshDaBest.FreedomBot.Listener;
 
 import com.FoxIshDaBest.FreedomBot.BotUtil;
-import java.util.Arrays;
-import java.util.List;
 import me.StevenLawson.TotalFreedomMod.TFM_AdminList;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -37,7 +35,7 @@ public class BotListener implements Listener {
         Player player = event.getPlayer();
         if (TFM_AdminList.isAdminImpostor(player)) {
             Bukkit.broadcastMessage(BotUtil.BOTPREFIX + player.getName() + " is an impostor...");
-            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Please verify in forum's shoutbox.");
+            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Please verify in the forum's shoutbox.");
         } else {
             if (player.hasPlayedBefore()) {
                 Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Welcome back, " + player.getName() + "!");

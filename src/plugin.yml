@@ -1,12 +1,12 @@
 name: FreedomBot
 main: com.FoxIshDaBest.FreedomBot.FreedomBot
-version: 1.4
+version: 2.0
 author: FoxIshDaBest
-softdepend: [TotalFreedomMod]
+depend: [TotalFreedomMod]
 
 commands:
     freedombot:
-      description: 'Displays FreedomBot Information.'
+      description: 'Displays FreedomBot information.'
       usage: /<command>
       
     admintool:
@@ -19,8 +19,4 @@ commands:
       
     adminalert:
       description: 'Alert an online administrator.'
-      usage: /<command>
-      
-    makemefleh:
-      description: 'fleh.'
       usage: /<command>
