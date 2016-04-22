@@ -34,7 +34,7 @@ public class BotListener implements Listener {
     public void onPlayerLogin(PlayerLoginEvent event) {
         Player player = event.getPlayer();
         if (TFM_AdminList.isAdminImpostor(player)) {
-            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + player.getName() + " is an impostor...");
+            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + player.getName() + " is an impostor!");
             Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Please verify in the forum's shoutbox.");
         } else {
             if (player.hasPlayedBefore()) {
