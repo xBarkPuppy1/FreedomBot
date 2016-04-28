@@ -1,6 +1,6 @@
 name: FreedomBot
 main: com.FoxIshDaBest.FreedomBot.FreedomBot
-version: 2.0
+version: 2.1
 author: FoxIshDaBest
 depend: [TotalFreedomMod]
 
@@ -20,3 +20,8 @@ commands:
     adminalert:
       description: 'Alert an online administrator.'
       usage: /<command>
+      
+    verify:
+      description: 'Verification system. Password is configurable.'
+      usage: /<command>
+      
