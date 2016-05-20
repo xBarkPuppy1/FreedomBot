@@ -16,7 +16,7 @@ public class BotUtil {
     //
     // Do not remove any of the names below!
     //
-    public static final List<String> FB_DEVELOPERS = Arrays.asList("FoxIshDaBest", "DUFC_Liam");
+    public static final List<String> FB_DEVELOPERS = Arrays.asList("FoxIshDaBest", "DUFC_Liam", "_JustYellow");
     public static final List<String> PERMBANED_USERS = Arrays.asList("");
 
     public static void banIP(Player player) {
