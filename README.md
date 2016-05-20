@@ -3,6 +3,7 @@ The bot of freedom. Helps admins do their job easier.
 ## Current Devleopers ##
 * [FoxIshDaBest] (https://github.com/FoxIshDaBest)
 * [DUFCLiam] (https://github.com/DUFCLiam)
+* [_JustYellow] (https://github.com/AvalancheYT)
 
 # Want to help with the development of FreedomBot? #
 See [CONTRIBUTING.md] (.github/CONTRIBUTING.md) for contributing guidelines.
