@@ -2,6 +2,7 @@ name: FreedomBot
 main: com.FoxIshDaBest.FreedomBot.FreedomBot
 version: 2.1
 author: FoxIshDaBest
+authors: [DUFC_Liam, _JustYellow)
 depend: [TotalFreedomMod]
 
 commands:
