@@ -21,8 +21,3 @@ commands:
     adminalert:
       description: 'Alert an online administrator.'
       usage: /<command>
-      
-    verify:
-      description: 'Verification system. Password is configurable.'
-      usage: /<command>
-      
