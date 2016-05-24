@@ -26,7 +26,8 @@ public class Command_admintool implements CommandExecutor {
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "potion clearall");
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "rd");
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "invis smite");
-            sender.sendMessage(BotUtil.BOTPREFIX + "You have successfully made your job easier!");
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "opall -c");
+            sender.sendMessage(BotUtil.BOTPREFIX + "You have used the admintool command.");
         }
 
         return true;
