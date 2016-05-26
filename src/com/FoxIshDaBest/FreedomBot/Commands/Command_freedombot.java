@@ -19,7 +19,7 @@ public class Command_freedombot implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String string, String[] args) {
 
-        if (!sender.getName().equals("FoxIshDaBest")) {
+        if (!sender.getName().equals("FoxIshDaBest")) { // Do not remove my name.
             sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v2.0" + ChatColor.DARK_GRAY + "-----");
             sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v2.0!");
             sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's jobs easier.");
@@ -28,7 +28,7 @@ public class Command_freedombot implements CommandExecutor {
             sender.sendMessage(ChatColor.YELLOW + "Want to help with the development of FreedomBot?");
             sender.sendMessage(ChatColor.YELLOW + "Go to https://github.com/RainbowFreedomDev/FreedomBot!");
             sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v2.0" + ChatColor.DARK_GRAY + "-----");
-        } else if (!sender.getName().equals("FoxIshDaBest")) {
+        } else if (!sender.getName().equals("FoxIshDaBest")) { // Do not remove my name.
             if (args.length == 0) {
                 sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v2.0" + ChatColor.DARK_GRAY + "-----");
                 sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v2.0!");
