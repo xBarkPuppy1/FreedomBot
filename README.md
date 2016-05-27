@@ -4,7 +4,6 @@ The bot of freedom. Helps admins do their job easier.
 * [FoxIshDaBest] (https://github.com/FoxIshDaBest)
 * [DUFCLiam] (https://github.com/DUFCLiam)
 * [_JustYellow] (https://github.com/AvalancheYT)
-* [tylerhyperHD] (https://github.com/tylerhyperHD)
 
 ## Want to help with the development of FreedomBot?
 See [CONTRIBUTING.md] (.github/CONTRIBUTING.md) for contributing guidelines.
