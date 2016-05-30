@@ -1,9 +1,6 @@
 package com.mcplugindev.freedombot;
 
-import com.mcplugindev.freedombot.commands.Command_freedombot;
-import com.mcplugindev.freedombot.commands.Command_opme;
-import com.mcplugindev.freedombot.commands.Command_admintool;
-import com.mcplugindev.freedombot.commands.Command_adminalert;
+import com.mcplugindev.freedombot.commands.*;
 import com.mcplugindev.freedombot.listener.BotListener;
 import java.util.logging.Level;
 import org.bukkit.Server;
@@ -26,12 +23,13 @@ public class FreedomBot extends JavaPlugin {
         final PluginManager pm = plugin.getServer().getPluginManager();
         pm.registerEvents(new BotListener(), plugin);
         plugin.getLogger().log(Level.INFO, "FreedomBot v{0} has been enabled!", plugin.getDescription().getVersion());
-        plugin.getLogger().log(Level.INFO, "The current FreedomBot developers are FoxIshDaBest, DUFCLiam, _JustYellow, and tylerhyperHD.");
+        plugin.getLogger().log(Level.INFO, "The current FreedomBot developers are FoxIshDaBest, DUFC_Liam, _JustYellow, and tylerhyperHD.");
 
         this.getCommand("freedombot").setExecutor(new Command_freedombot(plugin));
         this.getCommand("opme").setExecutor(new Command_opme(plugin));
-        this.getCommand("admintool").setExecutor(new Command_admintool(plugin));
+        this.getCommand("admintools").setExecutor(new Command_admintools(plugin));
         this.getCommand("adminalert").setExecutor(new Command_adminalert(plugin));
+        this.getCommand("cleanup").setExecutor(new Command_cleanup(plugin));
 
     }
 

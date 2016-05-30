@@ -11,8 +11,8 @@ commands:
       description: 'Displays FreedomBot information.'
       usage: /<command>
       
-    admintool:
-      description: 'Administrator tools.'
+    cleanup:
+      description: 'Cleanup command.'
       usage: /<command>
       
     opme:
@@ -22,3 +22,7 @@ commands:
     adminalert:
       description: 'Alert an online administrator.'
       usage: /<command>
+    
+    admintools:
+        description: 'Gives yourself administrator tools.'
+        usage: /<command>
