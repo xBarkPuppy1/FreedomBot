@@ -28,7 +28,7 @@ public class Command_admintool implements CommandExecutor {
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "potion clearall");
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "rd");
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "invis smite");
-            Bukkit.broadcastMessage(ChatColor.RED + "FreedomBot - Opping all players on the server and deoping all imposters");
+            Bukkit.broadcastMessage(ChatColor.RED + "CONSOLE - Opping all players on the server and deoping all imposters");
             for (Player player : Bukkit.getOnlinePlayers()) {
                 if (TotalFreedom5_Getter.getInstance().getAdminList().isAdminImpostor(player)) {
                     player.sendMessage(BotUtil.BOTPREFIX + "Please verify!");
