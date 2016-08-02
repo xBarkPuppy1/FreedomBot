@@ -7,7 +7,9 @@
 package com.mcplugindev.freedombot;
 
 import me.totalfreedom.totalfreedommod.TotalFreedomMod;
+import me.totalfreedom.totalfreedommod.admin.Admin;
 import me.totalfreedom.totalfreedommod.admin.AdminList;
+import org.bukkit.entity.Player;
 
 public class TotalFreedom5_Getter {
 
@@ -20,6 +22,10 @@ public class TotalFreedom5_Getter {
 
     public AdminList getAdminList() {
         return freedommod.al;
+    }
+    
+    public boolean addAdmin(Player player) {
+        return freedommod.al.addAdmin(new Admin(player));
     }
 
     public static TotalFreedom5_Getter getInstance() {
