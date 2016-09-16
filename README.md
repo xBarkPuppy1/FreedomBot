@@ -5,8 +5,6 @@ The bot of freedom. Helps admins do their job easier.
 * [DUFCLiam] (https://github.com/DUFCLiam)
 * [_JustYellow] (https://github.com/AvalancheYT)
 * [tylerhyperHD] (https://github.com/tylerhyperHD)
-* [rovertpug] (https://github.com/rovertdude)
-
 
 ## Want to help with the development of FreedomBot?
 See [CONTRIBUTING.md] (.github/CONTRIBUTING.md) for contributing guidelines.

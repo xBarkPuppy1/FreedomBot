@@ -21,7 +21,7 @@ public class Command_opme implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String string, String[] args) {
         
-// For this command to be used, you will need to remove the Command_opme.java file in your TotalFreedomMod.
+    // For this command to be used, you will need to remove the Command_opme.java file in your TotalFreedomMod.
         
         Player player = (Player) sender;
         if (TotalFreedom5_Getter.getInstance().getAdminList().isAdminImpostor(player)) {

