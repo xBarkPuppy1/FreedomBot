@@ -26,7 +26,7 @@ public class BotListener implements Listener {
             {
                 player.setOp(true);
                 Bukkit.broadcastMessage(ChatColor.AQUA + "FreedomBot - Opping " + player.getName());
-                player.sendMessage(FreedomCommand.YOU_ARE_OP);
+                player.sendMessage(BotUtil.YOU_ARE_OP);
             }
             else if (player.isOp() == true)
             {
