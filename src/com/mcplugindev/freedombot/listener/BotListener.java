@@ -20,6 +20,22 @@ public class BotListener implements Listener {
           player.kickPlayer("no kys " + player.getName());  
         }
         
+        if (message.contains("hey freedombot") && message.contains("op") && message.contains("me"))
+        {
+            if (player.isOp() == false)
+            {
+                player.setOp(true);
+                Bukkit.broadcastMessage(ChatColor.AQUA + "FreedomBot - Opping " + player.getName());
+                player.sendMessage(FreedomCommand.YOU_ARE_OP);
+            }
+            else if (player.isOp() == true)
+            {
+                player.sendMessage(ChatColor.RED + "You are already op!");
+            }
+            event.setCancelled(true);
+            return;
+        }
+        
     }
     
     @EventHandler
