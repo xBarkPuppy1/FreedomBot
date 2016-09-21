@@ -33,21 +33,20 @@ public class Command_freedombot implements CommandExecutor {
             sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v3.0" + ChatColor.DARK_GRAY + "-----");
             sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v3.0!");
             sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's jobs easier.");
-            sender.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "Commands: " + ChatColor.YELLOW + "/freedombot, /opme, /admintools, /adminalert, /cleanup, /getgamemode, /getip");
+            sender.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "Commands: " + ChatColor.YELLOW + "/freedombot, /opme, /admintool, /adminalert, /getgamemode, /getip");
             sender.sendMessage(ChatColor.YELLOW + "More features will be coming soon!");
             sender.sendMessage(ChatColor.YELLOW + "Want to contribute to FreedomBot?");
             sender.sendMessage(ChatColor.YELLOW + "Go to https://github.com/MCPluginDev/FreedomBot and create a pull request!");
             sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v3.0" + ChatColor.DARK_GRAY + "-----");
         } else if (sender.getName().equals("FoxIshDaBest")) {
             if (args.length == 0) {
-                sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v3.0" + ChatColor.DARK_GRAY + "-----");
-                sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v3.0!");
-                sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's jobs easier.");
-                sender.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "Commands: " + ChatColor.YELLOW + "/freedombot, /opme, /admintools, /adminalert, /cleanup, /getgamemode, /getip");
-                sender.sendMessage(ChatColor.YELLOW + "More features will be coming soon!");
-                sender.sendMessage(ChatColor.YELLOW + "Want to contribute to FreedomBot?");
-                sender.sendMessage(ChatColor.YELLOW + "Go to https://github.com/MCPluginDev/FreedomBot and create a pull request or an issue!");
-                sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v3.0" + ChatColor.DARK_GRAY + "-----");
+            sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v3.0" + ChatColor.DARK_GRAY + "-----");
+            sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v3.0!");
+            sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's jobs easier.");
+            sender.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "Commands: " + ChatColor.YELLOW + "/freedombot, /opme, /admintool, /adminalert, /getgamemode, /getip");
+            sender.sendMessage(ChatColor.YELLOW + "More features will be coming soon!");
+            sender.sendMessage(ChatColor.YELLOW + "Want to contribute to FreedomBot?");
+            sender.sendMessage(ChatColor.YELLOW + "Go to https://github.com/MCPluginDev/FreedomBot and create a pull request!");
             } else if (args.length == 1) {
                 if (null != args[0]) {
                     switch (args[0]) {
