@@ -40,7 +40,7 @@ public class BotUtil {
 
     public static void deopall() {
         for (Player player : Bukkit.getOnlinePlayers()) {
-            Bukkit.broadcastMessage(ChatColor.RED + "FreedomBot - Deopping all players on the server");
+            Bukkit.broadcastMessage(ChatColor.RED + "FreedomBot - De-opping all players on the server");
             Bukkit.broadcastMessage(YOU_ARE_NOT_OP);
             player.setOp(false);
         }
