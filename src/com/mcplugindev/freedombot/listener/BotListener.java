@@ -36,6 +36,11 @@ public class BotListener implements Listener {
             return;
         }
         
+        if (message.equalsIgnoreCase("hey freedombot") || message.equalsIgnoreCase("hey, freedombot") || message.equalsIgnoreCase("hey, freedombot."))
+        {
+            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Hello, " + player.getName() + ".");
+        }
+        
     }
     
     @EventHandler
