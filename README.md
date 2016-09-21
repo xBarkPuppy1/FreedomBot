@@ -7,6 +7,7 @@ FreedomBot is a bot of freedom, which helps admins to do their job easier.
 * [Mayoralty](https://github.com/AvalancheYT)
 * [tylerhyperHD](https://github.com/tylerhyperHD)
 * [rovertpug](https://github.com/rovertdude)
+* [heroguy42](https://github.com/heroguy42)
 
 ## Want to help with the development of FreedomBot?
 See [CONTRIBUTING.md] (.github/CONTRIBUTING.md) for contributing guidelines.
