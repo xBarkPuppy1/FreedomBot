@@ -30,7 +30,7 @@ public class BotListener implements Listener {
             }
             else if (player.isOp() == true)
             {
-                player.sendMessage(ChatColor.RED + "You are already op!");
+                player.sendMessage(BotUtil.BOTPREFIX + ChatColor.RED + "You are already op!");
             }
             event.setCancelled(true);
             return;
