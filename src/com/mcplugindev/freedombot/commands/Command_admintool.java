@@ -27,6 +27,7 @@ public class Command_admintool implements CommandExecutor {
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "nickclean");
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "potion clearall");
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "rd");
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "mp");
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "invis smite");
             Bukkit.broadcastMessage(ChatColor.RED + "CONSOLE - Opping all players on the server and deoping all imposters");
             for (Player player : Bukkit.getOnlinePlayers()) {
