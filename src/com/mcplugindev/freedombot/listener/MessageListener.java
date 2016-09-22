@@ -1,5 +1,7 @@
 package com.mcplugindev.freedombot.listener;
 
-public MessageListener {
+import org.bukkit.event.Listener;
+
+public class MessageListener implements Listener {
 
 }

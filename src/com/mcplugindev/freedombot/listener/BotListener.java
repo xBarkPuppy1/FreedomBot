@@ -3,6 +3,7 @@ package com.mcplugindev.freedombot.listener;
 import com.mcplugindev.freedombot.BotUtil;
 import com.mcplugindev.freedombot.TotalFreedom5_Getter;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
