@@ -26,11 +26,10 @@ public class FreedomBot extends JavaPlugin {
         plugin.getLogger().log(Level.INFO, "The current FreedomBot developers are FoxIshDaBest, DUFC_Liam, _JustYellow, and tylerhyperHD.");
         this.getCommand("freedombot").setExecutor(new Command_freedombot(plugin));
         this.getCommand("opme").setExecutor(new Command_opme(plugin));
-        this.getCommand("admintools").setExecutor(new Command_admintools(plugin));
+        this.getCommand("admintool").setExecutor(new Command_admintool(plugin));
         this.getCommand("getgamemode").setExecutor(new Command_getgamemode(plugin));
         this.getCommand("getip").setExecutor(new Command_getip(plugin));
         this.getCommand("adminalert").setExecutor(new Command_adminalert(plugin));
-        this.getCommand("cleanup").setExecutor(new Command_cleanup(plugin));
 
     }
 
