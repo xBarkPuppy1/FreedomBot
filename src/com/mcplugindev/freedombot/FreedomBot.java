@@ -2,6 +2,7 @@ package com.mcplugindev.freedombot;
 
 import com.mcplugindev.freedombot.commands.*;
 import com.mcplugindev.freedombot.listener.BotListener;
+import com.mcplugindev.freedombot.listener.MessageListener;
 import java.util.logging.Level;
 import org.bukkit.Server;
 import org.bukkit.plugin.PluginManager;
@@ -22,6 +23,7 @@ public class FreedomBot extends JavaPlugin {
     public void onEnable() {
         final PluginManager pm = plugin.getServer().getPluginManager();
         pm.registerEvents(new BotListener(), plugin);
+        pm.registerEvents(new MessageListener(), plugin);
         plugin.getLogger().log(Level.INFO, "FreedomBot v{0} has been enabled!", plugin.getDescription().getVersion());
         plugin.getLogger().log(Level.INFO, "The current FreedomBot developers are FoxIshDaBest, DUFC_Liam, _JustYellow, and tylerhyperHD.");
         this.getCommand("freedombot").setExecutor(new Command_freedombot(plugin));
