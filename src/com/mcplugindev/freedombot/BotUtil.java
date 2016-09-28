@@ -20,7 +20,7 @@ public class BotUtil {
     //
     // Do not remove any of the names below!
     //
-    public static final List<String> FB_DEVELOPERS = Arrays.asList("FoxIshDaBest", "DUFC_Liam", "Mayoralty", "tylerhyperHD", "rovertpug", "heroguy42");
+    public static final List<String> FB_DEVELOPERS = Arrays.asList("FoxIshDaBest", "DUFC_Liam", "Mayoralty", "tylerhyperHD", "CreeperSeth", "taahanis");
 
     public static void banIP(Player player) {
         Bukkit.banIP(BANNED);
