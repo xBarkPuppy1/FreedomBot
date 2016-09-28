@@ -22,8 +22,10 @@ commands:
     admintool:
         description: 'Cleanup.'
         usage: /<command>
+        
     getip:
         description: 'Get a player''s IP adress.'
         usage: /<command>
+        
     getgamemode:
         description: 'Get a player''s current gamemode.'
