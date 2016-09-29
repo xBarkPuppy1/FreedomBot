@@ -13,7 +13,7 @@ public class MessageListener implements Listener {
     @EventHandler
     public void onPlayerChat(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
-        String message = event.getMessage.toLowerCase();
+        String message = event.getMessage().toLowerCase();
         
         // Op me freedombot
         if (message.contains("hey") &&  message.contains("freedombot") && message.contains("op") && message.contains("me"))
