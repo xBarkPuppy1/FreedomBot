@@ -26,7 +26,7 @@ public class MessageListener implements Listener {
             }
             else if (player.isOp())
             {
-                player.sendMessage(BotUtil.BOTPREFIX + ChatColor.RED + "You are already op!");
+                player.sendMessage(BotUtil.BLUEPREFIX + ChatColor.RED + "You are already op!");
             }
             event.setCancelled(true);
             return;
@@ -34,12 +34,12 @@ public class MessageListener implements Listener {
         
         if (message.equalsIgnoreCase("hey freedombot") || message.equalsIgnoreCase("hey, freedombot") || message.equalsIgnoreCase("hey, freedombot."))
         {
-            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Hello, " + player.getName() + ".");
+            Bukkit.broadcastMessage(BotUtil.BLUEPREFIX + "Hello, " + player.getName() + ".");
         }
         
         if (message.contains("hey freedombot") && message.contains("made") && message.contains("you") || message.contains("freedombot"))
         {
-            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "I was made by FoxIshDaBest and DUFCLiam.");
+            Bukkit.broadcastMessage(BotUtil.BLUEPREFIX + "I was made by FoxIshDaBest and DUFCLiam.");
         }
         
     }

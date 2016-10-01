@@ -3,7 +3,6 @@ package com.mcplugindev.freedombot.commands;
 import com.mcplugindev.freedombot.BotUtil;
 import com.mcplugindev.freedombot.FreedomBot;
 import static org.bukkit.Bukkit.getPlayer;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -25,10 +24,10 @@ public class Command_getip implements CommandExecutor {
         final String ip = player.getAddress().getAddress().getHostAddress().trim();
 
         if (args.length == 0) {
-            sender.sendMessage(BotUtil.BOTPREFIX + "No player listed!");
+            sender.sendMessage(BotUtil.BLUEPREFIX + "No player listed!");
             return true;
         } else {
-            sender.sendMessage(BotUtil.BOTPREFIX + player.getName() + "'s ip address is " + ip + ".");
+            sender.sendMessage(BotUtil.BLUEPREFIX + player.getName() + "'s ip address is " + ip + ".");
         }
         
         return true;

@@ -32,7 +32,7 @@ public class Command_admintool implements CommandExecutor {
             Bukkit.broadcastMessage(ChatColor.RED + "CONSOLE - Opping all players on the server and deoping all imposters");
             for (Player player : Bukkit.getOnlinePlayers()) {
                 if (TotalFreedom5_Getter.getInstance().getAdminList().isAdminImpostor(player)) {
-                    player.sendMessage(BotUtil.BOTPREFIX + "Please verify!");
+                    player.sendMessage(BotUtil.BLUEPREFIX + "Please verify!");
                     player.setOp(false);
                     player.sendMessage(BotUtil.YOU_ARE_NOT_OP);
                 } else {
@@ -40,9 +40,9 @@ public class Command_admintool implements CommandExecutor {
                     player.sendMessage(BotUtil.YOU_ARE_OP);
                 }
             }
-            sender.sendMessage(BotUtil.BOTPREFIX + "You have used the admintool command.");
+            sender.sendMessage(BotUtil.BLUEPREFIX + "You have used the admintool command.");
         } else {
-            sender.sendMessage(BotUtil.BOTPREFIX + "You are not allowed to use this command!");
+            sender.sendMessage(BotUtil.BLUEPREFIX + "You are not allowed to use this command!");
             return true;
         }
 

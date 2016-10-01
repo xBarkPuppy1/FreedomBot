@@ -4,6 +4,7 @@ import com.mcplugindev.freedombot.commands.*;
 import com.mcplugindev.freedombot.listener.BotListener;
 import com.mcplugindev.freedombot.listener.MessageListener;
 import java.util.logging.Level;
+import org.bukkit.Bukkit;
 import org.bukkit.Server;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -26,6 +27,7 @@ public class FreedomBot extends JavaPlugin {
         pm.registerEvents(new MessageListener(), plugin);
         plugin.getLogger().log(Level.INFO, "FreedomBot v{0} has been enabled!", plugin.getDescription().getVersion());
         plugin.getLogger().log(Level.INFO, "The current FreedomBot developers are FoxIshDaBest, DUFC_Liam, _JustYellow, and tylerhyperHD.");
+        Bukkit.broadcastMessage(BotUtil.BLUEPREFIX + "I have been enabled! Yay!");
         this.getCommand("freedombot").setExecutor(new Command_freedombot(plugin));
         this.getCommand("opme").setExecutor(new Command_opme(plugin));
         this.getCommand("admintool").setExecutor(new Command_admintool(plugin));
@@ -38,6 +40,7 @@ public class FreedomBot extends JavaPlugin {
     @Override
     public void onDisable() {
         plugin.getLogger().log(Level.INFO, "FreedomBot v{0} has been disabled!", plugin.getDescription().getVersion());
+        Bukkit.broadcastMessage(BotUtil.BLUEPREFIX + "I have been disabled! Goodbye D:");
 
     }
 

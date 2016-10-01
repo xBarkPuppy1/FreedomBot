@@ -37,7 +37,7 @@ public class Command_adminalert implements CommandExecutor {
                 return true;
             }
         } else {
-            sender.sendMessage(BotUtil.BOTPREFIX + "You are an admin! Use adminchat to talk to other admins in private.");
+            sender.sendMessage(BotUtil.BLUEPREFIX + "You are an admin! Use adminchat to talk to other admins in private.");
         }
 
         return true;

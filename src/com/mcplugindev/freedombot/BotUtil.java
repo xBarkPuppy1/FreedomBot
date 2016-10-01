@@ -10,12 +10,12 @@ import org.bukkit.entity.Player;
 
 public class BotUtil {
     
-    public static final String NO_PERMISSION = BotUtil.BOTPREFIX + "You are not allowed to use this command!";
+    public static final String NO_PERMISSION = BotUtil.BLUEPREFIX + "You are not allowed to use this command!";
     public static final String YOU_ARE_OP = ChatColor.YELLOW + "You are now op!";
     public static final String YOU_ARE_NOT_OP = ChatColor.YELLOW + "You are no longer op!";
-    public static final String BANNED = BotUtil.BOTPREFIX + "You have been banned.";
-    public static final String UNBANNED = BotUtil.BOTPREFIX + "You have been unbanned.";
-    public static final String BOTPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "Freedom" + ChatColor.RED + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.RESET + " ";
+    public static final String BANNED = BotUtil.BLUEPREFIX + "You have been banned.";
+    public static final String UNBANNED = BotUtil.BLUEPREFIX + "You have been unbanned.";
+    public static final String REDPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "Freedom" + ChatColor.RED + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.RESET + " ";
     public static final String BLUEPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.BLUE + "Freedom" + ChatColor.DARK_AQUA + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.AQUA + " ";
     public static final String GREENPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.DARK_GREEN + "Freedom" + ChatColor.GREEN + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.RESET + " ";
     public static final List<String> PERMBANED_USERS = Arrays.asList("player1", "player2", "player3");

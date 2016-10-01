@@ -25,7 +25,7 @@ public class Command_opme implements CommandExecutor {
         
         Player player = (Player) sender;
         if (TotalFreedom5_Getter.getInstance().getAdminList().isAdminImpostor(player)) {
-            sender.sendMessage(BotUtil.BOTPREFIX + "You are an imposter. Verify!");
+            sender.sendMessage(BotUtil.BLUEPREFIX + "You are an imposter. Verify!");
             sender.setOp(false);
             return true;
         } else if (!(player.isOp())) {
@@ -34,7 +34,7 @@ public class Command_opme implements CommandExecutor {
             sender.sendMessage(BotUtil.YOU_ARE_OP);
             return true;
         } else if (player.isOp()) {
-            sender.sendMessage(BotUtil.BOTPREFIX + "You are already op!");
+            sender.sendMessage(BotUtil.BLUEPREFIX + "You are already op!");
             return true;
         }
         return true;

