@@ -18,6 +18,7 @@ public class BotUtil {
     public static final String REDPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "Freedom" + ChatColor.RED + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.RESET + " ";
     public static final String BLUEPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.BLUE + "Freedom" + ChatColor.DARK_AQUA + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.AQUA + " ";
     public static final String GREENPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.DARK_GREEN + "Freedom" + ChatColor.GREEN + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.RESET + " ";
+    public static final String ORANGEPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.GOLD + "Freedom" + ChatColor.YELLOW + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.RESET + " ";
     public static final List<String> PERMBANED_USERS = Arrays.asList("player1", "player2", "player3");
     //
     // Do not remove any of the names below!
