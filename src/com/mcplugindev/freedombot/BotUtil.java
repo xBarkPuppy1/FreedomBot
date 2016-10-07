@@ -18,6 +18,7 @@ public class BotUtil {
     public static final String REDPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.DARK_RED + "Freedom" + ChatColor.RED + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.RESET + " ";
     public static final String BLUEPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.BLUE + "Freedom" + ChatColor.DARK_AQUA + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.AQUA + " ";
     public static final String GREENPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.DARK_GREEN + "Freedom" + ChatColor.GREEN + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.RESET + " ";
+    public static final String ORANGEPREFIX = ChatColor.DARK_GRAY + "[" + ChatColor.GOLD + "Freedom" + ChatColor.YELLOW + "Bot" + ChatColor.DARK_GRAY + "]" + ChatColor.RESET + " ";
     public static final List<String> PERMBANED_USERS = Arrays.asList("player1", "player2", "player3");
     //
     // Do not remove any of the names below!
@@ -31,7 +32,12 @@ public class BotUtil {
     public static void unbanIP(Player player) {
         Bukkit.unbanIP(UNBANNED);
     }
-
+    
+    public static String color(String color) {
+        return ChatColor.translateAlternateColorCodes('&', color);
+        
+    }
+ 
     public static void opall() {
         for (Player player : Bukkit.getOnlinePlayers()) {
             Bukkit.broadcastMessage(ChatColor.AQUA + "FreedomBot - Opping all players on the server");

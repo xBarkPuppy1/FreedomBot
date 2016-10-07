@@ -1,6 +1,7 @@
 package com.mcplugindev.freedombot.listener;
 
 import com.mcplugindev.freedombot.BotUtil;
+import com.mcplugindev.freedombot.FreedomBot;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -10,36 +11,77 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class MessageListener implements Listener {
     
+    static FreedomBot plugin;
+    
+    public MessageListener(FreedomBot pl) {
+        plugin = pl;
+    }
+    
     @EventHandler
     public void onPlayerChat(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
         String message = event.getMessage().toLowerCase();
         
-        // Op me freedombot
-        if (message.contains("hey") &&  message.contains("freedombot") && message.contains("op") && message.contains("me"))
-        {
-            if (!player.isOp())
-            {
+        if (message.contains("hey freedombot") && message.contains("op") && message.contains("me")) {
+            if (!player.isOp()) {
                 player.setOp(true);
                 Bukkit.broadcastMessage(ChatColor.AQUA + "FreedomBot - Opping " + player.getName());
                 player.sendMessage(BotUtil.YOU_ARE_OP);
             }
-            else if (player.isOp())
-            {
-                player.sendMessage(BotUtil.BLUEPREFIX + ChatColor.RED + "You are already op!");
+            else if (player.isOp()) {
+                player.sendMessage(BotUtil.color(plugin.getConfigMain().getString("botprefix") + " &fYou are already op!"));
             }
-            event.setCancelled(true);
             return;
         }
         
-        if (message.equalsIgnoreCase("hey freedombot") || message.equalsIgnoreCase("hey, freedombot") || message.equalsIgnoreCase("hey, freedombot."))
-        {
+        if (message.equalsIgnoreCase("hey freedombot") || message.equalsIgnoreCase("hey, freedombot")) {
+            plugin.getServer().broadcastMessage(BotUtil.color(plugin.getConfigMain().getString("botprefix") + " &fHello, " + player.getName() + "."));
+        }
+        
+        if (message.contains("hey freedombot") && message.contains("who made you")) {
+            plugin.getServer().broadcastMessage(BotUtil.color(plugin.getConfigMain().getString("botprefix") + " &fI was made by FoxIshDaBest and DUFCLiam."));
+        }
+        
+        if (message.equals(" ")) {
+            event.setCancelled(true);
+        }
+        
+        if (message.contains("hey freedombot") && message.contains("notice me")) {
+          plugin.getServer().broadcastMessage(BotUtil.color(plugin.getConfigMain().getString("botprefix") + " &fyou have been noticed o3o"));  
+        }
+        
+        if (message.contains("hey freedombot") && message.contains("give me") && message.contains("owner") || message.contains("admin")) {
+            plugin.getServer().broadcastMessage(BotUtil.color(plugin.getConfigMain().getString("botprefix") + " &fNo."));
+        }
+        
+        if (message.contains("hey freedombot") && message.contains("red prefix")) {
+            Bukkit.broadcastMessage(BotUtil.REDPREFIX + "Hello, " + player.getName() + ".");
+        }
+        
+        if (message.contains("hey freedombot") && message.contains("green prefix")) {
+            Bukkit.broadcastMessage(BotUtil.GREENPREFIX + "Hello, " + player.getName() + ".");
+        }
+        
+        if (message.contains("hey freedombot") && message.contains("blue prefix")) {
             Bukkit.broadcastMessage(BotUtil.BLUEPREFIX + "Hello, " + player.getName() + ".");
         }
         
-        if (message.contains("hey freedombot") && message.contains("made") && message.contains("you") || message.contains("freedombot"))
-        {
-            Bukkit.broadcastMessage(BotUtil.BLUEPREFIX + "I was made by FoxIshDaBest and DUFCLiam.");
+        if (message.contains("hey freedombot") && message.contains("orange prefix")) {
+            Bukkit.broadcastMessage(BotUtil.ORANGEPREFIX + "Hello, " + player.getName() + ".");
+        }
+        
+        if (message.contains("hey freedombot") && message.contains("kill yourself") || message.contains("kys")) {
+            plugin.getServer().broadcastMessage(BotUtil.color(plugin.getConfigMain().getString("botprefix") + " &fwha ;-;"));
+            Bukkit.broadcastMessage(ChatColor.WHITE + "FreedomBot died");
+        }
+        
+        if (message.contains("hey freedombot") && message.contains("who are you")) {
+            Bukkit.broadcastMessage(ChatColor.WHITE + "<" + player.getName() + "> I am you.");
+        }
+        
+        if (message.contains("hey freedombot") && message.contains("kill me")) {
+            player.setHealth(0);
+            Bukkit.broadcastMessage(ChatColor.WHITE + player.getName() + " was slain by FreedomBot");
         }
         
     }
