@@ -22,7 +22,7 @@ public class MessageListener implements Listener {
                 player.sendMessage(BotUtil.YOU_ARE_OP);
             }
             else if (player.isOp()) {
-                player.sendMessage(BotUtil.BLUEPREFIX + ChatColor.RED + "You are already op!");
+                player.sendMessage(BotUtil.BLUEPREFIX + "You are already op!");
             }
             event.setCancelled(true);
             return;

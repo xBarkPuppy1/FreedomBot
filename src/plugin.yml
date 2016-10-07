@@ -12,7 +12,7 @@ commands:
       usage: /<command>
       
     opme:
-      description: 'Op yourself.'
+      description: 'Op yourself. You need to remove the TotalFreedomMod''s /opme to use this command.'
       usage: /<command>
       
     adminalert:
@@ -29,3 +29,4 @@ commands:
         
     getgamemode:
         description: 'Get a player''s current gamemode.'
+        alias: [ggm]
