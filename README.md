@@ -1,4 +1,4 @@
-# FreedomBot
+S# FreedomBot
 FreedomBot is a bot of freedom, which helps admins to do their job easier.
 
 ### Current Developers
@@ -6,7 +6,6 @@ FreedomBot is a bot of freedom, which helps admins to do their job easier.
 * [DUFCLiam](https://github.com/DUFCLiam)
 * [Mayoralty](https://github.com/AvalancheYT)
 * [tylerhyperHD](https://github.com/tylerhyperHD)
-* [CreeperSeth] (https://github.com/CreeperSeth)
 * [taahanis] (https://github.com/ThePheonixBlader)
 
 ### Want to help with the development of FreedomBot?
