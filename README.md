@@ -14,3 +14,8 @@ See [CONTRIBUTING.md] (.github/CONTRIBUTING.md) for contributing guidelines.
 
 ### Want to see the license for FreedomBot?
 Just go to [LICENSE.md] (LICENSE.md) for the license.
+
+### Information:
+Well this will help you understand how the plugin works
+
+The plugin is made up of listeners and commands and when a user types something we have coded it shall make a chain of events happen please feel free to check the code to see what they do.
