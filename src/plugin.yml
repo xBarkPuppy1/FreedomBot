@@ -3,7 +3,7 @@ main: com.mcplugindev.freedombot.FreedomBot
 version: 3.0
 description: 'FreedomBot is a plugin that will help you with administrating your FreeOp server.'
 author: FoxIshDaBest
-authors: [DUFC_Liam, Mayoralty, tylerhyperHD, taahanis, CreeperSeth]
+authors: [DUFC_Liam, Mayoralty, tylerhyperHD, taahanis]
 depend: [TotalFreedomMod, Aero]
 
 commands:
