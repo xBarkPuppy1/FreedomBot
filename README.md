@@ -1,4 +1,4 @@
-S# FreedomBot
+# FreedomBot
 FreedomBot is a bot of freedom, which helps admins to do their job easier.
 
 ### Current Developers
