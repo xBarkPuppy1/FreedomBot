@@ -8,7 +8,6 @@ FreedomBot. The bot of freedom. Helps admins do their job easier.
 * [DUFCLiam](https://github.com/DUFCLiam)
 * [Mayoralty](https://github.com/AvalancheYT)
 * [tylerhyperHD](https://github.com/tylerhyperHD)
-* [taahanis] (https://github.com/ThePheonixBlader)
 
 ### Want to help with the development of FreedomBot?
 See [CONTRIBUTING.md] (.github/CONTRIBUTING.md) for contributing guidelines.
