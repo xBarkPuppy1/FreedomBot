@@ -26,7 +26,7 @@ public class FreedomBot extends JavaPlugin {
         pm.registerEvents(new BotListener(), plugin);
         pm.registerEvents(new MessageListener(), plugin);
         plugin.getLogger().log(Level.INFO, "FreedomBot v{0} has been enabled!", plugin.getDescription().getVersion());
-        plugin.getLogger().log(Level.INFO, "The current FreedomBot developers are FoxIshDaBest, DUFC_Liam, _JustYellow, and tylerhyperHD.");
+        plugin.getLogger().log(Level.INFO, "The current FreedomBot developers are FoxIshDaBest, DUFC_Liam, _JustYellow, and tylerhyperHD. and now xBarkPuppy1");
         this.getCommand("freedombot").setExecutor(new Command_freedombot(plugin));
         this.getCommand("opme").setExecutor(new Command_opme(plugin));
         this.getCommand("admintool").setExecutor(new Command_admintool(plugin));
